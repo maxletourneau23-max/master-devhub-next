@@ -1,6 +1,6 @@
 # Master DevHub
 
-Max Letourneau's public developer profile and project command center. The site presents work across estimating, construction technology, AI automation, project controls, and application development.
+Max Letourneau's public developer profile and hybrid project command center. The V2 experience combines visual case studies, a public-safe project pulse, experience, a build log, a curated launchpad, and a roadmap across estimating, construction technology, AI automation, project controls, and application development.
 
 ## Stack
 
@@ -10,7 +10,7 @@ Max Letourneau's public developer profile and project command center. The site p
 - Tailwind CSS 4
 - Vercel
 
-The first release is fully static. It has no database, authentication, API routes, analytics, or runtime secrets.
+The public release is fully static. It has no database, authentication, API routes, analytics, or runtime secrets. The private command center shown on the site is a planned future surface, not a functioning authenticated area.
 
 ## Local setup
 
@@ -43,7 +43,7 @@ npm run check
 
 ## Content updates
 
-Portfolio content is centralized in `src/data/portfolio.ts`. Keep entries public-safe:
+Portfolio content is centralized in `src/data/portfolio.ts`. Projects, case studies, current activity, experience entries, build-log entries, launchpad links, and roadmap items all come from typed local data. Keep entries public-safe:
 
 - No credentials, tokens, private URLs, or environment values
 - No customer, pricing, estimate, or proprietary employer information
@@ -106,4 +106,6 @@ Keep the old Vercel project and its `vercel.app` URL available for rollback for 
 
 ## Design
 
-The interface follows an industrial blueprint/editorial system: true-white surfaces, graphite typography, cobalt technical linework, open project rows, a tool matrix, workspace tree, resource index, and roadmap timeline.
+The interface follows an industrial blueprint/editorial system: true-white surfaces, graphite typography, cobalt technical linework, deep-navy command rails, visual project showcases, open project rows, a tool matrix, workspace tree, build log, public launchpad, private-dashboard preview, and roadmap timeline.
+
+Each project is statically generated at `/projects/[slug]` with project-specific metadata, public-safe context, and previous/next case-study navigation.
