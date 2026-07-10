@@ -63,11 +63,14 @@ If a future feature needs a secret:
 
 ## GitHub setup
 
-The intended public repository is:
+The public repository is:
 
 ```text
-maxletourneau23-max/master-devhub
+maxletourneau23-max/master-devhub-next
 ```
+
+The `-next` suffix keeps this fresh public codebase separate from the private
+legacy repository that remains available for rollback.
 
 Recommended workflow after the initial scaffold:
 
@@ -81,7 +84,8 @@ Enable secret scanning, push protection, Dependabot alerts, and a `main` ruleset
 
 ## Vercel deployment
 
-Create a new Git-integrated Vercel project named `master-devhub-next` from the public repository. Do not connect this checkout to the legacy project.
+The Git-integrated Vercel project is named `master-devhub-next`. This checkout
+must never be connected to the legacy project.
 
 1. Import the new repository in Vercel.
 2. Confirm the framework preset is Next.js.
