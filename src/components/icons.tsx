@@ -27,6 +27,74 @@ export function GitHubIcon({ className }: IconProps) {
   );
 }
 
+export function NowIcon({
+  className,
+  type,
+}: IconProps & {
+  type: "focus" | "projects" | "deployment" | "experiment" | "roadmap" | "complete";
+}) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+  };
+
+  if (type === "focus") {
+    return (
+      <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+        <circle cx="16" cy="16" r="11" />
+        <circle cx="16" cy="16" r="6" />
+        <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none" />
+        <path d="m20 12 7-7M23 5h4v4" />
+      </svg>
+    );
+  }
+
+  if (type === "projects") {
+    return (
+      <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+        <path d="M3.5 9.5h10l2 2H28v15H3.5z" />
+        <path d="M7 9.5V6h8l2 2h8v3.5M11 18h10M16 13v10" />
+      </svg>
+    );
+  }
+
+  if (type === "deployment") {
+    return (
+      <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+        <path d="M8 24.5H6.5a4 4 0 0 1-.8-7.9A7.7 7.7 0 0 1 20 11a5.5 5.5 0 0 1 5.5 5.5h.5a3.5 3.5 0 0 1 0 7H24" />
+        <path d="M16 27V14m-5 5 5-5 5 5" />
+      </svg>
+    );
+  }
+
+  if (type === "experiment") {
+    return (
+      <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+        <path d="M12 4h8M14 4v8L7.5 23.2A3 3 0 0 0 10.1 28h11.8a3 3 0 0 0 2.6-4.8L18 12V4" />
+        <path d="M10.5 22h11M12.5 18h7" />
+      </svg>
+    );
+  }
+
+  if (type === "roadmap") {
+    return (
+      <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+        <path d="m4 7 7-3 10 4 7-3v20l-7 3-10-4-7 3zM11 4v20M21 8v20" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={className} viewBox="0 0 32 32" aria-hidden="true" {...common}>
+      <circle cx="16" cy="16" r="12" />
+      <path d="m10.5 16 3.8 3.8 7.5-8" />
+    </svg>
+  );
+}
+
 export function RoadmapSymbol({ type }: { type: "profile" | "dashboard" | "ai" | "integration" | "solar" }) {
   if (type === "profile") {
     return (
