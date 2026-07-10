@@ -34,7 +34,7 @@ export const projects: readonly Project[] = [
   {
     name: "Master DevHub",
     description: "Personal developer profile and command center",
-    href: "https://github.com/maxletourneau23-max/master-devhub",
+    href: "https://github.com/maxletourneau23-max/master-devhub-next",
   },
   { name: "SolarOps OS", description: "Solar operations platform" },
   {
